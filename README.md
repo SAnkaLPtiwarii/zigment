@@ -28,6 +28,7 @@ A React TypeScript application that generates forms dynamically from JSON schema
 bash
 # Clone repository
 git clone https://github.com/SAnkaLPtiwarii/zigment.git
+
 cd dynamic-form-generator
 
 # Install dependencies
