@@ -1,50 +1,115 @@
-# React + TypeScript + Vite
+# Dynamic Form Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React TypeScript application that generates forms dynamically from JSON schemas with real-time preview and validation.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Real-time JSON schema editing with syntax highlighting
+- Dynamic form generation with live preview
+- Form validation using Zod
+- Dark/Light mode support
+- Export form submissions as JSON
+- Responsive design
+- Type-safe implementation
+- Comprehensive test coverage
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React 18+
+- TypeScript
+- Tailwind CSS
+- React Hook Form
+- Zod Validation
+- Monaco Editor
+- Jest & Playwright for testing
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+bash
+# Clone repository
+git clone 
+cd dynamic-form-generator
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# Install dependencies
+npm install
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+# Start development server
+npm run dev
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
+## Usage
+
+1. Edit JSON schema in left panel
+2. Preview generated form in right panel
+3. Submit form to see validation
+4. Download submissions as JSON
+
+Example Schema:
+json
+{
+  "formTitle": "Project Requirements Survey",
+  "formDescription": "Please fill out this survey about your project needs",
+  "fields": [
+    {
+      "id": "name",
+      "type": "text",
+      "label": "Full Name",
+      "required": true,
+      "placeholder": "Enter your full name"
+    }
+  ]
+}
+
+
+## Available Scripts
+
+bash
+npm run dev         # Start development server
+npm run build      # Build for production
+npm test          # Run unit tests
+npm run test:e2e  # Run end-to-end tests
+npm run lint      # Run ESLint
+npm run format    # Format code with Prettier
+
+
+## Project Structure
+
+
+src/
+├── components/      # React components
+├── hooks/          # Custom hooks
+├── utils/          # Utility functions
+├── types/          # TypeScript types
+├── tests/          # Test files
+└── constants/      # Constant values
+
+
+## Contributing
+
+1. Fork repository
+2. Create feature branch
+3. Commit changes
+4. Push to branch
+5. Open pull request
+
+## Testing
+
+bash
+# Unit tests
+npm test
+
+# E2E tests
+npm run test:e2e
+
+# Test coverage
+npm run test:coverage
+
+
+## License
+
+MIT License
+
+## Author
+SANKALP TIWARI
+
+
